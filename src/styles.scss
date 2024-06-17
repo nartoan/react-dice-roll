@@ -1,5 +1,5 @@
 ._space3d {
-    perspective: 1000px;
+    // perspective: 1000px;
     text-align: center;
     display: inline-block;
     padding: unset;
@@ -15,7 +15,7 @@
         width: 100%;
         height: 100%;
         transform-style: preserve-3d;
-        transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+        transform: rotateX(-90.03deg) rotateY(0.03deg) rotateZ(0.03deg);
     }
     ._3dface {
         overflow: hidden;
@@ -60,19 +60,19 @@
         }
     }
     &.one ._3dbox {
-        transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+        transform: rotateX(90.03deg) rotateY(0deg) rotateZ(0deg);
     }
     &.two ._3dbox {
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
     &.three ._3dbox {
-        transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+        transform: rotateX(0deg) rotateY(180.03deg) rotateZ(0deg);
     }
     &.four ._3dbox {
-        transform: rotateX(-90deg) rotateY(90deg) rotateZ(90deg);
+        transform: rotateX(-90.03deg) rotateY(90.03deg) rotateZ(90.03deg);
     }
     &.five ._3dbox {
-        transform: rotateX(90deg) rotateY(-90deg) rotateZ(90deg);
+        transform: rotateX(90.03deg) rotateY(-90.03deg) rotateZ(90.03deg);
     }
     &.rolling ._3dbox {
         transform-style: preserve-3d;
