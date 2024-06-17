@@ -107,7 +107,7 @@ const Dice = forwardRef((props: TProps, ref: React.MutableRefObject<TDiceRef>) =
             ...placementStyles,
             width: size + 'px',
             height: size + 'px',
-            filter: disabled ? 'grayscale(100%)' : 'unset' 
+            // filter: disabled ? 'grayscale(100%)' : 'unset' 
         });
     }, [placementStyles, size, disabled]);
 
