@@ -1,5 +1,5 @@
 {
-  "name": "react-dice-roll",
+  "name": "@nartoan/react-dice-roll",
   "version": "1.2.2",
   "description": "A highly customizable dice roll package built in react.",
   "scripts": {

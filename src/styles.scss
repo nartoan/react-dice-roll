@@ -53,12 +53,11 @@
         border-radius: 50%;
         background-color: #000;
     }
-    ._3dface--one .defaultFace span {
-        width: 60%;
-        height: 60%;
-        box-shadow: 0 0 6px red;
-        border-radius: 50%;
-        background-color: red;
+    ._3dface--one {
+        .defaultFace span {
+            box-shadow: 0 0 6px red;
+            background-color: red;
+        }
     }
     &.one ._3dbox {
         transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);

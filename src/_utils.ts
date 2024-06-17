@@ -21,7 +21,7 @@ export const faceTransformMap: TFaceTransformMap = {
 
 export const defaultFaceGrid: TDefaultFaceGrid = {
     1: [12],
-    2: [11, 13],
+    2: [6, 18],
     3: [6, 12, 18],
     4: [6, 8, 16, 18],
     5: [6, 8, 12, 16, 18],
