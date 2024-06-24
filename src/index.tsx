@@ -39,26 +39,26 @@ const Dice = forwardRef((props: TProps, ref: React.MutableRefObject<TDiceRef>) =
     const [placementStyles, setPlacementStyles] = useState<React.CSSProperties>({});
     const [buttonStyles, setButtonStyles] = useState<React.CSSProperties>({});
 
-    const handleDiceRoll = (value?: TValue) => {
-        let diceAudio: HTMLAudioElement;
-        if (sound) {
-            diceAudio = new Audio(sound);
-            diceAudio.play();
-        }
-        setRolling(true);
-        setTimeout(() => {
-            let rollValue = Math.floor((Math.random() * 6) + 1) as TValue;
+    const handleDiceRoll = (value?: TValue, _rollingTime?: number) => {
+      let diceAudio: HTMLAudioElement;
+      if (sound) {
+        diceAudio = new Audio(sound);
+        diceAudio.play();
+      }
+      setRolling(true);
+      setTimeout(() => {
+        let rollValue = Math.floor(Math.random() * 6 + 1) as TValue;
 
-            if (value) rollValue = value;
-            if (cheatValue) rollValue = cheatValue;
-            
-            setRolling(false);
-            setValue(rollValue);
-            
-            if (diceAudio) diceAudio.pause();
-            if (!onRoll) return;
-            onRoll(rollValue);
-        }, rollingTime);
+        if (value) rollValue = value;
+        if (cheatValue) rollValue = cheatValue;
+
+        setRolling(false);
+        setValue(rollValue);
+
+        if (diceAudio) diceAudio.pause();
+        if (!onRoll) return;
+        onRoll(rollValue);
+      }, _rollingTime || rollingTime);
     };
 
     useImperativeHandle(ref, () => ({ rollDice: handleDiceRoll }));
